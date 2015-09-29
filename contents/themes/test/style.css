@@ -1,0 +1,545 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   重置样式
+   ========================================================================== */
+input[type="search"] { 
+    padding: 0 10px;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* ==========================================================================
+   全局设定
+   ========================================================================== */
+
+body {
+    padding: 0;
+    font: 13px Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    color: #454545;
+    background-color: #96baee;
+    margin: 0 auto;
+    width: 70%;
+    height: 900px;
+    letter-spacing: 0.5px;
+}
+
+a {
+    color: #7DA1BC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #278DCE;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+hr {
+    height: 1px;
+    border-style: none;
+    color: #d0d0d0;
+    background-color: #c0c0c0;
+    margin: 10px 0;
+}
+
+@font-face {
+    font-family: 'GuifxIcon';
+    src: url('Guifx/guifx_v2_transports-webfont.eot');
+    src: url('Guifx/guifx_v2_transports-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Guifx/guifx_v2_transports-webfont.woff') format('woff'),
+    url('Guifx/guifx_v2_transports-webfont.ttf') format('truetype'),
+    url('Guifx/guifx_v2_transports-webfont.svg#Guifxv2TransportsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    src: url("font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("font/fontawesome-webfont.woff") format("woff"), url("font/fontawesome-webfont.ttf") format("truetype"), url("font/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+}
+
+/* ==========================================================================
+   自定义简便规则
+   ========================================================================== */
+
+.align_left {
+    text-align: left;
+}
+.align_right {
+    text-align: right;
+}
+.align_center {
+    text-align: center;
+}
+
+.clearfix {
+    clear: left;
+}
+
+/* ==========================================================================
+   header
+   ========================================================================== */
+
+#logo {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background: transparent;
+    float: left;
+}
+
+#logo h1 {
+    font-weight: bold;
+    text-shadow: #888 3px 2px 3px;
+}
+
+#logo h2 {
+    font: italic 1em Arial, "微软雅黑", Sans-Serif;
+    letter-spacing: 0;
+    color: #868686;
+    margin: 0;
+    padding: 0;
+}
+
+#logo #icons {
+    float: right;
+    margin: 25px 15px 0;
+    padding: 0;
+}
+
+#logo #icons img {
+    padding-right: 2px;
+    border: 0;
+}
+
+/* ==========================================================================
+   index, 文章部分
+   ========================================================================== */
+
+#content {
+    /*height : 600px;  /*--------子元素从这继承---------*/
+    margin-top: 25px;
+}
+
+#main {
+    background: inherit;
+    width: 74%;
+    height: inherit;
+    float: left;
+    border-radius: 7px;
+}
+
+.post_item {
+    background-color: #fff;
+    padding: 8px 30px;
+    margin-bottom: 20px;
+    box-shadow: 1px 2px 3px rgb(221, 221, 221);
+}
+
+.post_item h1 {
+    margin-bottom: 20px;
+}
+
+.post_item h1 a {
+    text-decoration: none;
+    color: #555;
+}
+
+.post_item h1 a:hover {
+    text-decoration: none;
+    color: #7DA1BC;
+}
+
+div#term_name {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px 0 10px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 2px 3px rgb(221, 221, 221);
+}
+
+#term_name h1 {
+    font-size: 30px;
+}
+
+/* post excerpt */
+.post_excerpt {
+    margin-top: 25px;
+}
+
+/*post meta*/
+.post_meta {
+    font-size: 12px;
+    color: #999;
+    padding: 7px 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.post_meta a {
+    margin-right: 7px;
+}
+
+a.meta-category:before {
+    font-family: FontAwesome;;
+    content: "\f07b";
+}
+
+a.meta-date:before {
+    font-family: FontAwesome;
+    content: "\f073";
+}
+
+a.meta-edit:before {
+    font-family: FontAwesome;;
+    content: "\f044";
+}
+
+/* post footer */
+.post_footer {
+    border-top: 1px solid rgb(194, 194, 194);
+    margin-bottom: 8px;
+    padding-top: 10px;
+}
+
+.post_footer a {
+    color: #999;
+}
+
+.post_footer a:hover {
+    color: #7DA1BC;
+}
+
+.post_footer a.read_more:before {
+    font: 0.8em FontAwesome;
+    content: '\f054';
+}
+
+.post_footer a span {
+    font-size: 93%;
+    padding-left: 5px;
+}
+
+/* ==========================================================================
+   single_post
+   ========================================================================== */
+
+#single_post{
+    padding: 20px 35px;
+}
+
+#single_post #post_content {
+    margin-top: 20px;
+    font-size: 1.2em;
+    line-height: 1.7em;
+}
+
+/* ==========================================================================
+   右侧边栏
+   ========================================================================== */
+
+#right_side {
+    float: right;
+    width: 23%;
+}
+
+#right_side div.widget {
+    background-color: #fff;
+    margin-bottom: 25px;
+    box-shadow: 1px 2px 3px rgb(221, 221, 221);
+}
+
+#right_side div.widget h3 {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 1em;
+    margin: 0;
+}
+
+#right_side .widget ul {
+    padding: 15px;
+}
+
+#right_side .widget a {
+    line-height: 2em;
+}
+
+#search_box input {
+    /*padding: 10px 15px;*/
+
+    border: 1px solid #DDDDDD;
+    width: 100%;
+    height: 35px;
+    font-size: 90%;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
+
+#footer {
+    padding: 10px;
+    margin-top: 20px;
+    color: #777;
+    font-size: 90%;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #6D8A94;
+}
+
+
+/* ==========================================================================
+   widget
+   ========================================================================== */
+
+/* 返回顶部按钮  */
+p#back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 80px;
+}
+
+p#back-to-top a {
+    text-align: center;
+    text-decoration: none;
+    /*color:#d1d1d1;*/
+    display: block;
+
+    /*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+    -moz-transition: color 1s;
+    -webkit-transition: color 1s;
+    -o-transition: color 1s;
+}
+
+p#back-to-top a:hover {
+    /*color:#979797;*/
+}
+
+p#back-to-top a span {
+    background: transparent url(images/top.png) no-repeat left top;
+    border-radius: 3px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+
+    /*使用CSS3中的transition属性给<span>标签背景颜色添加渐变效果*/
+
+    -moz-transition: background 1s;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
+}
+
+/*
+	#back-to-top a:hover span{
+      background: url(images/ico_gotop1.png) no-repeat left bottom;
+}
+*/
+
+/* 网站收藏 */
+a.link_description:hover {
+    position: relative;
+}
+
+a.link_description span {
+    display: none;
+}
+
+a.link_description:hover span {
+    padding: 4px 8px;
+    color: #333;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    -webkit-box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 4px #222;
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #cccccc));
+    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+
+
+/* ==========================================================================
+   404 Error
+   ========================================================================== */
+
+#error404 h1 {
+    margin: 8px 0;
+    font-size: 3rem;
+    font-family: cursive;
+}
+
+#error404 img {
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   Navigation Menu Bar
+   ========================================================================== */
+#navigation {
+    background: #FFF;
+    height: 40px;
+    /*line-height: 40px;*/
+    border-bottom: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+}
+#navigation a {
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}
+/*** ESSENTIAL Navigation Style ***/
+.sf-menu,
+.sf-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sf-menu { line-height: 1.0 }
+.sf-menu ul {
+    position: absolute;
+    top: -999em;
+    width: 10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li { width: 100% }
+.sf-menu li:hover { /*顶层菜单*/
+    visibility: inherit; /* fixes IE7 'sticky bug' */
+    background: #1F1F1E;
+}
+.sf-menu li {
+    float: left;
+    position: relative;
+}
+.sf-menu a {
+    display: block;
+    position: relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+    left: 0;  /* 子菜单左对齐 */
+    top: 40px; /* match top ul list item height */
+    z-index: 99;
+    background: #1F1F1E;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul { top: -999em }
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+    left: 10em; /* match ul width 第二级子菜单对齐 */
+    top: 0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul { top: -999em }
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+    left: 10em; /* match ul width */
+    top: 0;
+}
+/*** navigation skin ***/
+.sf-menu {
+    float: left;
+    margin-bottom: 1em;
+}
+.sf-menu a {
+    color: #5c5c5c;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.sf-menu a:focus,
+.sf-menu a:hover{
+    color: #FFF;
+    background: #333;
+}
+/*li.sfHover { color: #333 }*/
+.sf-menu li li {text-transform: none; }
+.sf-menu li li li { background: #333 }
+.sf-menu ul a {
+    color: #CCC;
+    padding: 0 1.2em;
+    height: 35px;
+    line-height: 35px;
+}
+/*** arrows **/
+/*.sf-menu a.sf-with-ul {
+    padding-right: 2.25em;
+    min-width: 1px; *//* trigger IE7 hasLayout so spans position accurately *//*
+}
+.sf-sub-indicator {
+    position: absolute;
+    display: block;
+    right: .75em;
+    width: 9px;
+    height: 5px;
+    text-indent: -999em;
+    overflow: hidden;
+    background: url('images/arrows-down.png');
+}
+a > .sf-sub-indicator {
+    *//* give all except IE6 the correct values *//*
+    top: 18px;
+    background-position: 0 -100px; *//* use translucent arrow for modern browsers*//*
+}
+*//* apply hovers to modern browsers *//*
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+    background-position: -9px 0px; *//* arrow hovers for modern browsers*//*
+}
+*//* point right for anchors in subs *//*
+.sf-menu ul .sf-sub-indicator {
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    background: url('images/arrows-side.png');
+}
+.sf-menu ul a > .sf-sub-indicator { background-position: 0 0 }
+*//* apply hovers to modern browsers *//*
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+    background-position: -5px 0; *//* arrow hovers for modern browsers*//*
+}*/

@@ -1,0 +1,8 @@
+# 404 Error
+# 不要使用绝对路径，使用绝对URL返回的状态码为302(test.php)+200(404.php)
+	ErrorDocument	404	/blog/contents/themes/default/404.php
+
+#FallbackResource index.php
+
+RewriteEngine On
+RewriteRule ^.*\.php.*$ index.php
